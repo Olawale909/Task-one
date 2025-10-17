@@ -23,6 +23,9 @@ Query
 ```sql
 CREATE SCHEMA RETAIL_CHAIN;
 ```
+<img width="1920" height="1080" alt="Screenshot (78)" src="https://github.com/user-attachments/assets/b7d3f389-5821-4747-8402-f90d84d2854a" />
+
+
 ### STEP 2: Select Database
 ```sql
 USE RETAIL_CHAIN;
@@ -40,12 +43,16 @@ Previewed both tables to understand their structure and data contents.
 SELECT * FROM PRODUCT_TABLE;
 SELECT * FROM SALES_TABLE;
 ```
+
 ### Step 5: Inspect Data Table Structures
 Displayed column names, data types, and constraints to guide cleaning and validation steps.
 ```sql
 DESCRIBE PRODUCT_TABLE;
 DESCRIBE SALES_TABLE;
 ```
+<img width="1920" height="1080" alt="Screenshot (80)" src="https://github.com/user-attachments/assets/3ca1cb94-563a-46c0-b8ae-0fa34c7a881d" />
+<img width="1920" height="1080" alt="Screenshot (81)" src="https://github.com/user-attachments/assets/d1a7ff20-7aa3-431b-8e6d-a896d277a3e3" />
+
 ### Step 6: Check for Missing Values
 Checked for null values in important numeric columns.
 ```sql
@@ -68,6 +75,9 @@ SELECT *
 FROM SALES_TABLE
 WHERE QUANTITY <= 0;
 ```
+
+<img width="1920" height="1080" alt="Screenshot (82)" src="https://github.com/user-attachments/assets/12ffe718-68f3-4910-bfb6-aaf074482202" />
+
 ### Step 9: Check for Outliers
 Verified that price and quantity values are within reasonable ranges.
 #### Result
@@ -81,6 +91,10 @@ FROM PRODUCT_TABLE;
 SELECT MIN(QUANTITY) AS MIN_QUANTITY, MAX(QUANTITY) AS MAX_QUANTITY
 FROM SALES_TABLE;
 ```
+
+<img width="1920" height="1080" alt="Screenshot (83)" src="https://github.com/user-attachments/assets/fc43b651-7d31-42cb-853a-362c0c7d7ee0" />
+<img width="1920" height="1080" alt="Screenshot (84)" src="https://github.com/user-attachments/assets/bc8669ef-8a44-44f7-8728-3d35a9ef37e5" />
+
 ### Summary of Results
 - No missing data.
 - No duplicate product IDs.
